@@ -29,7 +29,9 @@ O `192.0.2.1` passa a vida inteira sem receber uma única requisição. É o est
 - OpenTofu `>= 1.6` (sim, **OpenTofu**. `terraform` aqui é palavrão leve.)
 - API token Cloudflare com, na zona:
   - **DNS:Edit**
-  - **Single Redirect:Edit** (alguns painéis chamam de *Dynamic Redirect*, porque nomear coisas é difícil)
+  - **Single Redirect:Edit** (no painel em português: *Zona → Redirecionamento único → Editar*; versões antigas chamam de *Dynamic Redirect*, porque nomear coisas é difícil)
+
+  Sem essa permissão o apply cria o registro A e para com `Authentication error (10000)` no ruleset. Editar as permissões de um token existente **não** muda o valor dele.
 
 ## ⚙️ Configuração
 1. Segredos no lugar certo:
