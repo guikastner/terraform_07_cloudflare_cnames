@@ -1,0 +1,12 @@
+# Normaliza finais de linha para LF no repositório
+* text=auto eol=lf
+
+*.tf      text eol=lf diff=hcl
+*.tfvars  text eol=lf diff=hcl
+*.hcl     text eol=lf diff=hcl
+*.md      text eol=lf
+*.sh      text eol=lf
+
+*.png binary
+*.jpg binary
+*.zip binary
