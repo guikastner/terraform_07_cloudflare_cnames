@@ -1,0 +1,17 @@
+sequenceDiagram
+    actor Gui as Você
+    participant J as dns.json
+    participant T as OpenTofu
+    participant C as Cloudflare
+    Gui->>J: adiciona "app": { "to": "https://..." }
+    Gui->>T: tofu plan
+    T->>C: o que existe aí?
+    C-->>T: nada desse app aí
+    T-->>Gui: Plan: 3 to add (respira fundo)
+    Gui->>T: tofu apply
+    T->>C: cria A proxied + Redirect Rule
+    C-->>T: feito ✅
+    Gui->>J: apaga "app"
+    Gui->>T: tofu apply
+    T->>C: some com isso
+    Note over C: Zero registros órfãos.<br/>Marie Kondo aprova.

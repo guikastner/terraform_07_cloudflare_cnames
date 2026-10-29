@@ -1,0 +1,8 @@
+# Copie para terraform.tfvars (não versionado) e preencha.
+api_token = "cf_api_token"
+zone_id   = "abcdef0123456789abcdef0123456789"
+zone_name = "kastner.com.br"
+proxied   = true
+
+# CNAMEs e redirecionamentos ficam em dns.json (veja dns.example.json).
+# dns_file = "dns.json"

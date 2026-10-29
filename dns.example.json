@@ -1,0 +1,27 @@
+{
+  "cnames": {
+    "blog": {
+      "target": "meusite.github.io",
+      "proxied": false,
+      "ttl": 3600,
+      "comment": "GitHub Pages"
+    },
+    "www": {
+      "target": "kastner.com.br"
+    }
+  },
+  "redirects": {
+    "app": {
+      "to": "https://destino.example.com",
+      "status_code": 301,
+      "preserve_path": true,
+      "preserve_query": true,
+      "comment": "app.kastner.com.br -> destino provisionado"
+    },
+    "docs": {
+      "to": "https://outro-destino.example.com/documentacao",
+      "status_code": 302,
+      "preserve_path": false
+    }
+  }
+}
